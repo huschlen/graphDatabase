@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+archivesBaseName ='graphDatabase'
+version = '1'
+repositories {
+    maven { url "https://repo.spring.io/libs-release" }
+    //mavenLocal()
+    mavenCentral()
+}
+dependencies {
+    compile  'org.springframework.boot:spring-boot-starter:1.4.1.RELEASE'
+	compile  'org.springframework:spring-context:4.3.6.RELEASE'
+	compile  'org.springframework:spring-tx:4.3.6.RELEASE'
+	compile  'org.springframework.data:spring-data-neo4j:3.4.4.RELEASE'
+	compile  'org.springframework.data:spring-data-neo4j-rest:3.4.4.RELEASE'
+	compile  'org.hibernate:hibernate-validator:5.2.4.Final'
+	compile  'org.neo4j:neo4j-rest-graphdb:2.0.1'
+	compile  'javax.enterprise:cdi-api:1.2'
+}
